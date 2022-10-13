@@ -31,7 +31,7 @@ class BookController {
             
         
         
-        response.status(500).send("getBook not implemented");
+      //  response.status(500).send("getBook not implemented");
     }
 
     addBook(request, response) {
