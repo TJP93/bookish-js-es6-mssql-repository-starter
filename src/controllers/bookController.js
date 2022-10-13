@@ -22,6 +22,14 @@ class BookController {
     async getBook(request, response, next) {
         const id = request.params.id;
         // TODO use id to get one book from repository
+        console.log( "request for book " + id );
+        if (id == 0) {
+            throw ("bad id");
+        }
+        let newBook = await this.bookRepository.getBookById(id);
+                response.status(200).send(JSON.stringify(newBook));
+            
+        
         
         response.status(500).send("getBook not implemented");
     }
