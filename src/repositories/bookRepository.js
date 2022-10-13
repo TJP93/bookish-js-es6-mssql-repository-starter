@@ -14,7 +14,7 @@ export default class BookRepository {
             }
         }
         return allbook;
-    }
+    } // or could use for loop?
 
     async getBookById(id) {
         console.log("get book " + id);
